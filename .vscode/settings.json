@@ -1,0 +1,9 @@
+{
+  "python.analysis.exclude": [
+    "**/venv/**",
+    "**/__pycache__/**"
+  ],
+  "python.analysis.ignore": [
+    "**/venv/**"
+  ]
+}

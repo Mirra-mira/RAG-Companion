@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+psycopg[binary]
+psycopg_pool
+pgvector
+pydantic
+python-dotenv
+google-generativeai

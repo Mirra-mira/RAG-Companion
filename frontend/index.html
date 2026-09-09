@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>KLTN - Test hệ thống bộ nhớ dài hạn</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 20px;
+    background: #f5f6f8; color: #1a1a1a;
+  }
+  h1 { font-size: 18px; margin-bottom: 4px; }
+  .sub { color: #666; font-size: 13px; margin-bottom: 16px; }
+  .panel {
+    background: white; border-radius: 10px; padding: 14px 16px;
+    margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .panel label { font-size: 12px; color: #555; display: block; margin-bottom: 4px; }
+  .panel input, .panel select {
+    width: 100%; padding: 8px 10px; border: 1px solid #ddd; border-radius: 6px;
+    font-size: 14px;
+  }
+  #chatBox {
+    background: white; border-radius: 10px; height: 380px; overflow-y: auto;
+    padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .msg {
+    margin-bottom: 10px; max-width: 80%; padding: 8px 12px; border-radius: 10px; font-size: 14px;
+    white-space: pre-wrap;          /* giu xuong dong nguoi dung go */
+    overflow-wrap: anywhere;        /* be tu qua dai (link, chuoi lien tuc) khong tran */
+  }
+  .msg.user { background: #2A5CAA; color: white; margin-left: auto; }
+  .msg.bot { background: #EAF1FB; color: #1a1a1a; }
+  .msg.system { background: #FFF7E6; color: #7a5c00; font-size: 12px; font-style: italic; max-width: 100%; }
+  .facts { font-size: 11px; color: #2E8B57; margin-top: 4px; }
+  .inputRow { display: flex; gap: 8px; align-items: flex-end; }
+  .inputRow textarea {
+    flex: 1; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px;
+    font-size: 14px; font-family: inherit; resize: none; line-height: 1.4;
+    min-height: 40px; max-height: 160px; overflow-y: auto;
+  }
+  .inputRow button {
+    padding: 10px 18px; background: #2A5CAA; color: white; border: none;
+    border-radius: 8px; cursor: pointer; font-size: 14px; height: 40px;
+  }
+  .inputRow button:hover { background: #1f4685; }
+  #factsPanel { max-height: 160px; overflow-y: auto; font-size: 12px; }
+  #factsPanel table { width: 100%; border-collapse: collapse; }
+  #factsPanel th, #factsPanel td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #eee; }
+  .badge { padding: 1px 6px; border-radius: 10px; font-size: 10px; color: white; }
+  .badge.active { background: #2E8B57; }
+  .badge.superseded { background: #9AA0A6; }
+</style>
+</head>
+<body>
+
+<h1>Test hệ thống bộ nhớ dài hạn</h1>
+<div class="sub">Frontend demo local — gọi backend tại <code id="apiUrlLabel"></code></div>
+
+<div class="panel">
+  <label>Backend URL</label>
+  <input id="apiUrl" value="http://localhost:8000">
+</div>
+
+<div class="panel">
+  <label>Người dùng đang test (user_id)</label>
+  <select id="userSelect"></select>
+  <div style="margin-top:8px; display:flex; gap:8px;">
+    <input id="newUsername" placeholder="Tên user mới (vd: user_a)" style="flex:1">
+    <button onclick="createUser()" style="padding:8px 14px; border:none; border-radius:6px; background:#2E8B57; color:white; cursor:pointer;">+ Tạo user</button>
+  </div>
+</div>
+
+<div id="chatBox"></div>
+
+<div class="inputRow">
+  <textarea id="msgInput" rows="1" placeholder="Nhập tin nhắn... (Enter để gửi, Shift+Enter để xuống dòng)"
+    oninput="autoGrow(this)"
+    onkeydown="if(event.key==='Enter' && !event.shiftKey) { event.preventDefault(); sendMessage(); }"></textarea>
+  <button onclick="sendMessage()">Gửi</button>
+</div>
+
+<div class="panel" style="margin-top:14px;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <label style="margin:0;">Facts đã lưu của user này</label>
+    <button onclick="loadFacts()" style="border:none;background:none;color:#2A5CAA;cursor:pointer;font-size:12px;">↻ Tải lại</button>
+  </div>
+  <div id="factsPanel">(chưa có dữ liệu)</div>
+</div>
+
+<script>
+function apiBase() { return document.getElementById('apiUrl').value.replace(/\/$/, ''); }
+document.getElementById('apiUrl').addEventListener('input', () => {
+  document.getElementById('apiUrlLabel').textContent = apiBase();
+});
+document.getElementById('apiUrlLabel').textContent = apiBase();
+
+// Load user list tu backend (source of truth = DB, khong dung localStorage
+// nua) — de moi trinh duyet/profile deu thay chung 1 danh sach user.
+async function loadUsers() {
+  try {
+    const res = await fetch(`${apiBase()}/dev/users`);
+    if (!res.ok) throw new Error(await res.text());
+    renderUserSelect(await res.json());
+  } catch (e) {
+    console.warn('Không load được user list:', e.message);
+  }
+}
+
+function renderUserSelect(list) {
+  const sel = document.getElementById('userSelect');
+  const prev = sel.value;   // giu lai lua chon hien tai neu con ton tai
+  sel.innerHTML = list.map(u =>
+    `<option value="${u.user_id}">${u.username} (${u.user_id.slice(0,8)}...)</option>`
+  ).join('');
+  if (prev && list.some(u => u.user_id === prev)) sel.value = prev;
+}
+
+async function createUser() {
+  const name = document.getElementById('newUsername').value.trim();
+  if (!name) return alert('Nhập tên user trước đã');
+  // /dev/create-user va /dev/users la endpoint tien ich test, khong thuoc
+  // dac ta chinh thuc o Bang 3.8 (gia dinh da co he thong auth rieng).
+  const res = await fetch(`${apiBase()}/dev/create-user`, {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({username: name})
+  });
+  if (!res.ok) return alert('Lỗi tạo user: ' + await res.text());
+  const data = await res.json();
+  await loadUsers();
+  // Auto-select user vua tao va load facts + chat history cua no.
+  document.getElementById('userSelect').value = data.user_id;
+  renderChatHistory();
+  loadFacts();
+  document.getElementById('newUsername').value = '';
+}
+
+// Lich su chat lay tu backend (bang conversations trong DB) — dong bo giua
+// cac trinh duyet/profile. Message role cua backend: 'user' | 'assistant',
+// frontend map thanh cls: 'user' | 'bot'. Cac message 'system' (loi client)
+// KHONG duoc luu backend — chi hien thi trong phien hien tai.
+
+// Render 1 message vao DOM.
+function renderMsg(text, cls, facts) {
+  const box = document.getElementById('chatBox');
+  const div = document.createElement('div');
+  div.className = 'msg ' + cls;
+  div.textContent = text;
+  if (facts && facts.length) {
+    const f = document.createElement('div');
+    f.className = 'facts';
+    f.textContent = 'Đã dùng: ' + facts.map(x => `${x.content} (score=${x.score.toFixed(2)})`).join(', ');
+    div.appendChild(f);
+  }
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+// Trong /chat backend tu luu ca user + assistant message. Frontend chi render.
+function addMsg(text, cls, facts) {
+  renderMsg(text, cls, facts);
+}
+
+// Clear chat box + fetch lai history cua user hien tai tu backend.
+async function renderChatHistory() {
+  const box = document.getElementById('chatBox');
+  box.innerHTML = '';
+  const userId = document.getElementById('userSelect').value;
+  if (!userId) return;
+  try {
+    const res = await fetch(`${apiBase()}/users/${userId}/messages`);
+    if (!res.ok) throw new Error(await res.text());
+    const msgs = await res.json();
+    msgs.forEach(m => renderMsg(m.content, m.role === 'user' ? 'user' : 'bot'));
+  } catch (e) {
+    renderMsg('Không load được lịch sử: ' + e.message, 'system');
+  }
+}
+
+function autoGrow(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+}
+
+async function sendMessage() {
+  const input = document.getElementById('msgInput');
+  const message = input.value.trim();
+  const userId = document.getElementById('userSelect').value;
+  if (!message) return;
+  if (!userId) return alert('Tạo/chọn user trước đã');
+
+  addMsg(message, 'user');
+  input.value = '';
+  autoGrow(input);
+
+  try {
+    const res = await fetch(`${apiBase()}/chat`, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({user_id: userId, message})
+    });
+    if (!res.ok) { addMsg('Lỗi: ' + await res.text(), 'system'); return; }
+    const data = await res.json();
+    addMsg(data.response, 'bot', data.retrieved_facts);
+    setTimeout(loadFacts, 1200); // đợi write path (background task) chạy xong
+  } catch (e) {
+    addMsg('Không kết nối được backend: ' + e.message, 'system');
+  }
+}
+
+async function loadFacts() {
+  const userId = document.getElementById('userSelect').value;
+  const panel = document.getElementById('factsPanel');
+  if (!userId) { panel.textContent = '(chưa chọn user)'; return; }
+  try {
+    const res = await fetch(`${apiBase()}/users/${userId}/facts`);
+    const facts = await res.json();
+    if (!facts.length) { panel.textContent = '(chưa có fact nào)'; return; }
+    panel.innerHTML = `<table><tr><th>Content</th><th>Category</th><th>Weight</th><th>Status</th></tr>` +
+      facts.map(f => `<tr><td>${f.content}</td><td>${f.category}</td><td>${f.weight}</td>
+        <td><span class="badge ${f.status}">${f.status}</span></td></tr>`).join('') + `</table>`;
+  } catch (e) {
+    panel.textContent = 'Lỗi tải facts: ' + e.message;
+  }
+}
+
+// Doi user: render lai lich su chat + facts cua user moi.
+document.getElementById('userSelect').addEventListener('change', () => {
+  renderChatHistory();
+  loadFacts();
+});
+
+// Khoi tao: load user list tu backend, neu co user thi load chat + facts.
+(async () => {
+  await loadUsers();
+  if (document.getElementById('userSelect').value) {
+    renderChatHistory();
+    loadFacts();
+  }
+})();
+</script>
+
+</body>
+</html>

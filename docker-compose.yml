@@ -1,0 +1,30 @@
+# Postgres + pgvector cho KLTN
+# Chay: docker compose up -d
+# Xem log: docker compose logs -f postgres
+# Dung:  docker compose down          (giu du lieu)
+# Xoa sach: docker compose down -v    (xoa luon volume)
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: kltn-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: kltn
+    ports:
+      - "5432:5432"
+    volumes:
+      # schema.sql tu chay khi container tao lan dau (volume con rong)
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+      # named volume: du lieu ton tai qua cac lan restart
+      - kltn_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d kltn"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  kltn_pgdata:

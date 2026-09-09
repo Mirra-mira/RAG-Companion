@@ -1,0 +1,28 @@
+# Bi mat - KHONG commit
+.env
+.env.local
+.env.*.local
+
+# Ghi chu noi bo cho AI assistant - khong nop
+CLAUDE.md
+.claude/settings.local.json
+
+# Tai lieu ca nhan - se move ra ngoai khi hoan thanh
+doc.txt
+
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# IDE / OS
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
