@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, BackgroundTasks
 from uuid import UUID
 from app.models.fact import ChatRequest, ChatResponse
 from app.models.conversation import MessageOut
+from app.core.config import settings
 from app.dependencies import (
     get_retrieval_service, get_llm_provider_dep,
     get_extraction_service, get_dedup_service,
@@ -39,25 +40,32 @@ def chat(
     dedup=Depends(get_dedup_service),
     conversation=Depends(get_conversation_service),
 ):
-    # ---- LUỒNG ĐỌC (đồng bộ, real-time) ----
-    # 1) Facts dai han lien quan
-    retrieved = retrieval.retrieve(req.user_id, req.message)
-    # 2) Bo nho ngan han: summary + N turn gan nhat
-    summary, recent_turns = conversation.build_context(req.user_id)
-    # 3) LLM tao phan hoi voi day du ngu canh
+    # Feature flag cho A/B experiment (muc 4.5): khi ENABLE_MEMORY=false,
+    # bo qua toan bo lop bo nho de do chat luong LLM baseline.
+    if settings.ENABLE_MEMORY:
+        # ---- LUỒNG ĐỌC (đồng bộ, real-time) ----
+        # 1) Facts dai han lien quan
+        retrieved = retrieval.retrieve(req.user_id, req.message)
+        # 2) Bo nho ngan han: summary + N turn gan nhat
+        summary, recent_turns = conversation.build_context(req.user_id)
+    else:
+        retrieved, summary, recent_turns = [], "", []
+
+    # 3) LLM tao phan hoi (voi hoac khong voi ngu canh, tuy flag)
     response_text = llm.generate_response(
         req.message, retrieved, summary=summary, recent_turns=recent_turns
     )
 
-    # Luu ca user message va assistant response vao conversations
-    # (dong bo — de lich su khong bi rot khi background task loi).
-    conversation.append(req.user_id, "user", req.message)
-    conversation.append(req.user_id, "assistant", response_text)
+    if settings.ENABLE_MEMORY:
+        # Luu ca user message va assistant response vao conversations
+        # (dong bo — de lich su khong bi rot khi background task loi).
+        conversation.append(req.user_id, "user", req.message)
+        conversation.append(req.user_id, "assistant", response_text)
 
-    # ---- LUỒNG GHI (bất đồng bộ) ----
-    background_tasks.add_task(
-        _run_write_path, req.user_id, req.message, extraction, dedup, conversation
-    )
+        # ---- LUỒNG GHI (bất đồng bộ) ----
+        background_tasks.add_task(
+            _run_write_path, req.user_id, req.message, extraction, dedup, conversation
+        )
 
     return ChatResponse(response=response_text, retrieved_facts=retrieved)
 

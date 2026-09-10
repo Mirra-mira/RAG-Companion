@@ -27,4 +27,8 @@ services:
     restart: unless-stopped
 
 volumes:
+  # Reuse volume da co tu lan setup truoc (khi project ten "kltn-project"),
+  # tranh mat data. Schema.sql da chay o lan init dau, khong can chay lai.
   kltn_pgdata:
+    external: true
+    name: kltn-project_kltn_pgdata

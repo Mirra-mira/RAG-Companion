@@ -14,9 +14,13 @@ class RankingService:
         self.half_life_days = half_life_days or settings.RECENCY_HALF_LIFE_DAYS
 
     def _recency_decay(self, updated_at) -> float:
+        # Naive datetime: coi là local time (đúng convention của datetime.now()),
+        # convert sang UTC để so sánh nhất quán. Trước đây .replace(tzinfo=utc)
+        # gán nhầm timezone khiến máy non-UTC ra age_days âm -> recency > 1.
         if updated_at.tzinfo is None:
-            updated_at = updated_at.replace(tzinfo=timezone.utc)
-        age_days = (datetime.now(timezone.utc) - updated_at).total_seconds() / 86400
+            updated_at = updated_at.astimezone(timezone.utc)
+        # Clamp age >= 0 phòng lệch đồng hồ hoặc dữ liệu "tương lai" bất thường.
+        age_days = max(0.0, (datetime.now(timezone.utc) - updated_at).total_seconds() / 86400)
         return 0.5 ** (age_days / self.half_life_days)
 
     def rank(self, candidates: list[dict], top_k: int) -> list[dict]:

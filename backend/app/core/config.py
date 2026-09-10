@@ -17,6 +17,12 @@ class Settings:
 
     EMBEDDING_DIM: int = 768
 
+    # Feature flag cho A/B experiment muc 4.5 (doc chuong 4).
+    # true (mac dinh) = che do B (co bo nho): dung retrieval + build_context.
+    # false = che do A (baseline): LLM chi thay cau hoi hien tai, khong facts,
+    #         khong summary, khong recent turns. Dung de so sanh chat luong.
+    ENABLE_MEMORY: bool = os.getenv("ENABLE_MEMORY", "true").lower() != "false"
+
     # ---- Tham số cho ConversationService (bộ nhớ ngắn hạn hội thoại) ----
     # Số turn gần nhất (chưa summarized) đưa vào prompt LLM. Free tier Gemini
     # cho phép prompt lớn nên 20 vẫn thoải mái.
