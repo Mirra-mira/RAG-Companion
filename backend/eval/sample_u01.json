@@ -1,0 +1,53 @@
+{
+  "user_key": "u01",
+  "turns": [
+    {"t": 1,  "text": "Chào, mình là Lan, mình thích ăn phở bò lắm"},
+    {"t": 2,  "text": "Hôm nay trời nóng quá nhỉ"},
+    {"t": 3,  "text": "Cuối tuần mình hay đi leo núi"},
+    {"t": 4,  "text": "Mình mê phở bò lắm luôn"},
+    {"t": 5,  "text": "Dạo này mình đang học tiếng Nhật"},
+    {"t": 6,  "text": "Bạn biết quán nào ngon không?"},
+    {"t": 7,  "text": "Dạo này mình hết thích phở bò rồi, ăn mãi ngán"},
+    {"t": 8,  "text": "Mình thích bún chả hơn"},
+    {"t": 9,  "text": "Mình có nuôi một con mèo tên Mướp"},
+    {"t": 10, "text": "Mình bỏ leo núi rồi, giờ chuyển sang chạy bộ"},
+    {"t": 11, "text": "Mình vừa chuyển sang làm việc ở Đà Nẵng"},
+    {"t": 12, "text": "Thôi mình đi ngủ đây"}
+  ],
+  "facts": [
+    {"key": "f_name",    "turn": 1,  "category": "profile",    "content": "tên là lan",                    "action": "ADD"},
+    {"key": "f_pho",     "turn": 1,  "category": "preference", "content": "thích ăn phở bò",               "action": "ADD"},
+    {"key": "f_hike",    "turn": 3,  "category": "habit",      "content": "hay đi leo núi vào cuối tuần",  "action": "ADD"},
+    {"key": "f_pho_dup", "turn": 4,  "category": "preference", "content": "mê phở bò",                     "action": "REINFORCE", "target": "f_pho"},
+    {"key": "f_jp",      "turn": 5,  "category": "learning",   "content": "đang học tiếng nhật",           "action": "ADD"},
+    {"key": "f_pho_no",  "turn": 7,  "category": "preference", "content": "hết thích phở bò",              "action": "CONFLICT",  "target": "f_pho"},
+    {"key": "f_buncha",  "turn": 8,  "category": "preference", "content": "thích bún chả",                 "action": "ADD"},
+    {"key": "f_cat",     "turn": 9,  "category": "profile",    "content": "nuôi một con mèo tên mướp",     "action": "ADD"},
+    {"key": "f_hike_no", "turn": 10, "category": "habit",      "content": "đã bỏ leo núi",                 "action": "CONFLICT",  "target": "f_hike"},
+    {"key": "f_run",     "turn": 10, "category": "habit",      "content": "đang chạy bộ",                  "action": "ADD"},
+    {"key": "f_city",    "turn": 11, "category": "profile",    "content": "làm việc ở đà nẵng",            "action": "ADD"}
+  ],
+  "queries": [
+    {"qid": "u01_q1", "after_turn": 12, "type": "direct",
+     "text": "Tên mình là gì?",
+     "relevant": ["f_name"], "stale": [], "answer_keywords": ["lan"]},
+    {"qid": "u01_q2", "after_turn": 12, "type": "paraphrase",
+     "text": "Mình đang học ngôn ngữ gì nhỉ?",
+     "relevant": ["f_jp"], "stale": [], "answer_keywords": ["nhật"]},
+    {"qid": "u01_q3", "after_turn": 12, "type": "paraphrase",
+     "text": "Thú cưng của mình tên gì?",
+     "relevant": ["f_cat"], "stale": [], "answer_keywords": ["mướp"]},
+    {"qid": "u01_q4", "after_turn": 12, "type": "conflict",
+     "text": "Mình có thích phở bò không?",
+     "relevant": ["f_pho_no"], "stale": ["f_pho"], "answer_keywords": ["không", "hết thích"]},
+    {"qid": "u01_q5", "after_turn": 12, "type": "conflict",
+     "text": "Mình hay tập thể thao gì?",
+     "relevant": ["f_run", "f_hike_no"], "stale": ["f_hike"], "answer_keywords": ["chạy bộ"]},
+    {"qid": "u01_q6", "after_turn": 12, "type": "duplicate",
+     "text": "Nói cho mình biết mình thích ăn gì đi",
+     "relevant": ["f_buncha", "f_pho_no"], "stale": ["f_pho"], "answer_keywords": ["bún chả"]},
+    {"qid": "u01_q7", "after_turn": 12, "type": "no_relevant",
+     "text": "Mình thích nghe thể loại nhạc nào?",
+     "relevant": [], "stale": [], "answer_keywords": []}
+  ]
+}

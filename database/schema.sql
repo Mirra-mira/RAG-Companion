@@ -37,6 +37,10 @@ CREATE INDEX IF NOT EXISTS idx_facts_embedding_hnsw
 CREATE INDEX IF NOT EXISTS idx_facts_user_status
     ON facts (user_id, status);
 
+-- Chỉ mục GIN cho keyword search (baseline B1 — xem migration 002)
+CREATE INDEX IF NOT EXISTS idx_facts_content_fts
+    ON facts USING gin (to_tsvector('simple', content));
+
 -- Bảng 3.7: user_reminders
 CREATE TABLE IF NOT EXISTS user_reminders (
     reminder_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

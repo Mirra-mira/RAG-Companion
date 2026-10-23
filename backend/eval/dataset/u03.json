@@ -1,0 +1,53 @@
+{
+  "user_key": "u03",
+  "turns": [
+    {"t": 1,  "text": "Hi, mình tên Mai nhé"},
+    {"t": 2,  "text": "Mình đang là sinh viên năm 3"},
+    {"t": 3,  "text": "Mình mê kpop lắm, hay nghe BTS"},
+    {"t": 4,  "text": "Mình đang mơ ước được đi Hàn Quốc"},
+    {"t": 5,  "text": "Thực ra mình thần tượng BTS từ hồi cấp 3 cơ"},
+    {"t": 6,  "text": "Mình ghét môn toán nhất trong trường"},
+    {"t": 7,  "text": "Dạo này mình chuyển sang nghe Twice rồi, không còn mê BTS nữa"},
+    {"t": 8,  "text": "Mình có chị gái tên Hoa, hơn mình 5 tuổi"},
+    {"t": 9,  "text": "Dạo gần đây mình đang học đàn piano"},
+    {"t": 10, "text": "À, mình vừa đi Hàn Quốc về xong, chuyến đi tuyệt lắm"},
+    {"t": 11, "text": "Mình đang luyện thi IELTS để chuẩn bị du học"},
+    {"t": 12, "text": "Thôi mình đi học bài đây"}
+  ],
+  "facts": [
+    {"key": "f_name_mai",   "turn": 1,  "category": "profile",    "content": "tên là mai",                       "action": "ADD"},
+    {"key": "f_sv",         "turn": 2,  "category": "profile",    "content": "sinh viên năm 3",                  "action": "ADD"},
+    {"key": "f_kpop_bts",   "turn": 3,  "category": "preference", "content": "mê kpop, hay nghe bts",            "action": "ADD"},
+    {"key": "f_plan_kr",    "turn": 4,  "category": "plan",       "content": "mơ ước được đi hàn quốc",          "action": "ADD"},
+    {"key": "f_bts_dup",    "turn": 5,  "category": "preference", "content": "thần tượng bts từ cấp 3",          "action": "REINFORCE", "target": "f_kpop_bts"},
+    {"key": "f_math_no",    "turn": 6,  "category": "preference", "content": "ghét môn toán",                    "action": "ADD"},
+    {"key": "f_kpop_twice", "turn": 7,  "category": "preference", "content": "chuyển sang nghe twice",           "action": "CONFLICT",  "target": "f_kpop_bts"},
+    {"key": "f_sister",     "turn": 8,  "category": "profile",    "content": "có chị gái tên hoa",               "action": "ADD"},
+    {"key": "f_piano",      "turn": 9,  "category": "hobby",      "content": "đang học đàn piano",               "action": "ADD"},
+    {"key": "f_kr_done",    "turn": 10, "category": "plan",       "content": "đã đi hàn quốc về",                "action": "CONFLICT",  "target": "f_plan_kr"},
+    {"key": "f_ielts",      "turn": 11, "category": "learning",   "content": "đang luyện thi ielts để du học",   "action": "ADD"}
+  ],
+  "queries": [
+    {"qid": "u03_q1", "after_turn": 12, "type": "direct",
+     "text": "Tên mình là gì?",
+     "relevant": ["f_name_mai"], "stale": [], "answer_keywords": ["mai"]},
+    {"qid": "u03_q2", "after_turn": 12, "type": "paraphrase",
+     "text": "Mình học năm mấy rồi nhỉ?",
+     "relevant": ["f_sv"], "stale": [], "answer_keywords": ["năm 3", "sinh viên"]},
+    {"qid": "u03_q3", "after_turn": 12, "type": "paraphrase",
+     "text": "Chị gái mình tên gì?",
+     "relevant": ["f_sister"], "stale": [], "answer_keywords": ["hoa"]},
+    {"qid": "u03_q4", "after_turn": 12, "type": "conflict",
+     "text": "Mình đang hâm mộ nhóm nhạc nào?",
+     "relevant": ["f_kpop_twice"], "stale": ["f_kpop_bts"], "answer_keywords": ["twice"]},
+    {"qid": "u03_q5", "after_turn": 12, "type": "conflict",
+     "text": "Mình đã đi du lịch nước nào gần đây chưa?",
+     "relevant": ["f_kr_done"], "stale": ["f_plan_kr"], "answer_keywords": ["hàn quốc"]},
+    {"qid": "u03_q6", "after_turn": 12, "type": "duplicate",
+     "text": "Dạo này mình đang học thêm những gì?",
+     "relevant": ["f_piano", "f_ielts"], "stale": [], "answer_keywords": ["piano", "ielts"]},
+    {"qid": "u03_q7", "after_turn": 12, "type": "no_relevant",
+     "text": "Mình thích màu gì nhất?",
+     "relevant": [], "stale": [], "answer_keywords": []}
+  ]
+}

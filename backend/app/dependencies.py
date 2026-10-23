@@ -2,8 +2,13 @@
 Dependency Injection đã trình bày ở mục 2.1.1. Muốn đổi từ Mock sang Gemini
 thật, hoặc đổi PostgreSQL sang công nghệ khác, chỉ cần sửa ở file này,
 không cần sửa code trong các Service.
+
+Cau hinh thuc nghiem (xem .env):
+  RETRIEVER_MODE = none | keyword | vector | hybrid
+  DEDUP_ENABLED  = true | false
 """
 from functools import lru_cache
+from app.core.config import settings
 from app.core.db import get_conn
 from app.repositories.fact_repository import FactRepository
 from app.repositories.conversation_repository import ConversationRepository
@@ -11,7 +16,9 @@ from app.services.embedding_provider import get_embedding_provider
 from app.services.llm_provider import get_llm_provider
 from app.services.extraction_service import ExtractionService
 from app.services.dedup_service import DedupService
-from app.services.ranking_service import RankingService, RetrievalService
+from app.services.baselines import NoDedupService
+from app.services.ranking_service import RankingService
+from app.services.retrievers import make_retriever
 from app.services.conversation_service import ConversationService
 
 
@@ -37,8 +44,11 @@ def get_ranking_service():
 
 @lru_cache
 def get_retrieval_service():
-    return RetrievalService(
-        get_fact_repository(), get_embedding_provider_dep(), get_ranking_service()
+    return make_retriever(
+        settings.RETRIEVER_MODE,
+        get_fact_repository(),
+        get_embedding_provider_dep(),
+        get_ranking_service(),
     )
 
 
@@ -49,9 +59,8 @@ def get_extraction_service():
 
 @lru_cache
 def get_dedup_service():
-    return DedupService(
-        get_fact_repository(), get_embedding_provider_dep(), get_llm_provider_dep()
-    )
+    cls = DedupService if settings.DEDUP_ENABLED else NoDedupService
+    return cls(get_fact_repository(), get_embedding_provider_dep(), get_llm_provider_dep())
 
 
 @lru_cache

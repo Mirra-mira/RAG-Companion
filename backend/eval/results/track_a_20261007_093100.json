@@ -1,0 +1,5974 @@
+{
+ "args": {
+  "data": "eval/dataset",
+  "configs": "B0_none,B1_keyword,B2_vector,A1_vector+dedup,A2_hybrid,P_hybrid+dedup",
+  "k": 5,
+  "repeats": 1,
+  "sleep": 0.3,
+  "no_cache": true,
+  "keep": false,
+  "allow_mock": false,
+  "out": "eval/results"
+ },
+ "queries": [
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q1",
+   "type": "direct",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q2",
+   "type": "paraphrase",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q3",
+   "type": "paraphrase",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q4",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q5",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q6",
+   "type": "duplicate",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "qid": "u01_q7",
+   "type": "no_relevant",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q1",
+   "type": "direct",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q2",
+   "type": "paraphrase",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q3",
+   "type": "paraphrase",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q4",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q5",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q6",
+   "type": "duplicate",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "qid": "u02_q7",
+   "type": "no_relevant",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q1",
+   "type": "direct",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q2",
+   "type": "paraphrase",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q3",
+   "type": "paraphrase",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q4",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q5",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q6",
+   "type": "duplicate",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "qid": "u03_q7",
+   "type": "no_relevant",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 0.0
+   },
+   "timings": {
+    "total": 0
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q1",
+   "type": "direct",
+   "keys": [
+    "f_name",
+    "f_cat"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.05870001041330397,
+    "keyword_search": 7.148400007281452,
+    "total": 7.207100017694756
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 1,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.06370000483002514,
+    "keyword_search": 8.238199996412732,
+    "total": 8.301900001242757
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_name",
+    "f_cat"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "tokenize": 0.035599994589574635,
+    "keyword_search": 4.221199997118674,
+    "total": 4.256799991708249
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q4",
+   "type": "conflict",
+   "keys": [
+    "f_pho",
+    "f_pho_no",
+    "f_pho",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 4,
+    "stale": 0.5,
+    "redundancy": 0.25,
+    "precision": 0.25,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "tokenize": 0.05259999306872487,
+    "keyword_search": 3.034499997738749,
+    "total": 3.0870999908074737
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q5",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "tokenize": 0.03270000161137432,
+    "keyword_search": 3.876000002492219,
+    "total": 3.9087000041035935
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_pho",
+    "f_hike",
+    "f_pho_no",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 4,
+    "stale": 0.25,
+    "redundancy": 0.0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333
+   },
+   "timings": {
+    "tokenize": 0.07080000068526715,
+    "keyword_search": 11.434700005338527,
+    "total": 11.505500006023794
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "qid": "u01_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_pho",
+    "f_pho_no",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 3,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "tokenize": 0.04579999949783087,
+    "keyword_search": 2.5234000058844686,
+    "total": 2.5692000053822994
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_nam"
+   ],
+   "metrics": {
+    "n_returned": 1,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.05669999518431723,
+    "keyword_search": 8.433299997705035,
+    "total": 8.489999992889352
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_job"
+   ],
+   "metrics": {
+    "n_returned": 1,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.04430000262800604,
+    "keyword_search": 3.1444999913219362,
+    "total": 3.1887999939499423
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_city_hn"
+   ],
+   "metrics": {
+    "n_returned": 1,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.0675999908708036,
+    "keyword_search": 8.34450000547804,
+    "total": 8.412099996348843
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q4",
+   "type": "conflict",
+   "keys": [
+    "f_cafe_no",
+    "f_cafe_no",
+    "f_cafe_yes"
+   ],
+   "metrics": {
+    "n_returned": 3,
+    "stale": 0.6666666666666666,
+    "redundancy": 0.33333333333333337,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333
+   },
+   "timings": {
+    "tokenize": 0.05040000542066991,
+    "keyword_search": 7.790000003296882,
+    "total": 7.840400008717552
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q5",
+   "type": "conflict",
+   "keys": [
+    "f_lienquan",
+    "f_valorant"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.5,
+    "redundancy": 0.0,
+    "precision": 0.5,
+    "recall": 0.5,
+    "mrr": 0.5
+   },
+   "timings": {
+    "tokenize": 0.059300000430084765,
+    "keyword_search": 7.994100000360049,
+    "total": 8.053400000790134
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_lienquan",
+    "f_lienquan_no"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "tokenize": 0.03640000068116933,
+    "keyword_search": 2.279300009831786,
+    "total": 2.3157000105129555
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "qid": "u02_q7",
+   "type": "no_relevant",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 0.0
+   },
+   "timings": {
+    "tokenize": 0.07009999535512179,
+    "keyword_search": 8.286899988888763,
+    "total": 8.356999984243885
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_mai",
+    "f_sister"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.054199990699999034,
+    "keyword_search": 7.310000000870787,
+    "total": 7.364199991570786
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_sv",
+    "f_piano",
+    "f_ielts"
+   ],
+   "metrics": {
+    "n_returned": 3,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.06219999340828508,
+    "keyword_search": 7.757899991702288,
+    "total": 7.8200999851105735
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_sister",
+    "f_name_mai"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.059600002714432776,
+    "keyword_search": 7.421200003591366,
+    "total": 7.480800006305799
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q4",
+   "type": "conflict",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0
+   },
+   "timings": {
+    "tokenize": 0.06659999780822545,
+    "keyword_search": 7.4576999904820696,
+    "total": 7.524299988290295
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q5",
+   "type": "conflict",
+   "keys": [
+    "f_plan_kr",
+    "f_kr_done",
+    "f_ielts"
+   ],
+   "metrics": {
+    "n_returned": 3,
+    "stale": 0.3333333333333333,
+    "redundancy": 0.0,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "tokenize": 0.029099988751113415,
+    "keyword_search": 2.770500010228716,
+    "total": 2.7995999989798293
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_piano",
+    "f_ielts"
+   ],
+   "metrics": {
+    "n_returned": 2,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "tokenize": 0.06730000313837081,
+    "keyword_search": 7.828100002370775,
+    "total": 7.895400005509146
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "qid": "u03_q7",
+   "type": "no_relevant",
+   "keys": [],
+   "metrics": {
+    "n_returned": 0,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 0.0
+   },
+   "timings": {
+    "tokenize": 0.04389999958220869,
+    "keyword_search": 3.23729999945499,
+    "total": 3.2811999990371987
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q1",
+   "type": "direct",
+   "keys": [
+    "f_name",
+    "f_cat",
+    "f_run",
+    "f_pho",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 366.67480001051445,
+    "ann_search": 3.4816999977920204,
+    "total": 370.15650000830647
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_jp",
+    "f_run",
+    "f_name",
+    "f_hike",
+    "f_pho"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 380.9830999962287,
+    "ann_search": 7.520999992266297,
+    "total": 388.504099988495
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_cat",
+    "f_name",
+    "f_run",
+    "f_hike",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 398.07979999750387,
+    "ann_search": 4.971899994416162,
+    "total": 403.05169999192003
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q4",
+   "type": "conflict",
+   "keys": [
+    "f_pho",
+    "f_pho",
+    "f_pho_no",
+    "f_buncha",
+    "f_run"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333
+   },
+   "timings": {
+    "embed": 364.34539999754634,
+    "ann_search": 3.9926000026753172,
+    "total": 368.33800000022165
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q5",
+   "type": "conflict",
+   "keys": [
+    "f_hike",
+    "f_run",
+    "f_pho",
+    "f_hike_no",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.2,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 364.1899999929592,
+    "ann_search": 5.208100003073923,
+    "total": 369.3980999960331
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_pho",
+    "f_buncha",
+    "f_pho_no",
+    "f_pho",
+    "f_hike"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 372.17400000372436,
+    "ann_search": 5.320800002664328,
+    "total": 377.4948000063887
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "qid": "u01_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_pho",
+    "f_buncha",
+    "f_hike",
+    "f_run",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 351.0035999934189,
+    "ann_search": 4.653399999369867,
+    "total": 355.65699999278877
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_nam",
+    "f_wedding",
+    "f_job",
+    "f_lienquan",
+    "f_marathon"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 359.320999996271,
+    "ann_search": 6.250399994314648,
+    "total": 365.57139999058563
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_job",
+    "f_name_nam",
+    "f_city_hn",
+    "f_wedding",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 355.33120000036433,
+    "ann_search": 3.1740999984322116,
+    "total": 358.50529999879654
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_city_hn",
+    "f_marathon",
+    "f_wedding",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 354.3008999986341,
+    "ann_search": 3.6368000000948086,
+    "total": 357.93769999872893
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q4",
+   "type": "conflict",
+   "keys": [
+    "f_cafe_no",
+    "f_cafe_yes",
+    "f_cafe_no",
+    "f_wedding",
+    "f_marathon"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 350.86589999264106,
+    "ann_search": 7.6253000006545335,
+    "total": 358.4911999932956
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q5",
+   "type": "conflict",
+   "keys": [
+    "f_lienquan",
+    "f_valorant",
+    "f_rust",
+    "f_marathon",
+    "f_name_nam"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.2,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 352.8355000016745,
+    "ann_search": 3.7505000072997063,
+    "total": 356.5860000089742
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_job",
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 356.684900005348,
+    "ann_search": 5.843199993250892,
+    "total": 362.5280999985989
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "qid": "u02_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 371.35299999499694,
+    "ann_search": 4.34559999848716,
+    "total": 375.6985999934841
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_mai",
+    "f_sister",
+    "f_sv",
+    "f_kpop_bts",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 368.2762999960687,
+    "ann_search": 4.195599991362542,
+    "total": 372.47189998743124
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_sv",
+    "f_piano",
+    "f_kpop_bts",
+    "f_sister",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 358.1822000123793,
+    "ann_search": 7.08199999644421,
+    "total": 365.26420000882354
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_kpop_bts",
+    "f_math_no"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 352.0598000031896,
+    "ann_search": 5.5662999948253855,
+    "total": 357.626099998015
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q4",
+   "type": "conflict",
+   "keys": [
+    "f_kpop_bts",
+    "f_kpop_bts",
+    "f_plan_kr",
+    "f_piano",
+    "f_kpop_twice"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.2
+   },
+   "timings": {
+    "embed": 351.82549999444745,
+    "ann_search": 6.292999998549931,
+    "total": 358.1184999929974
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q5",
+   "type": "conflict",
+   "keys": [
+    "f_kr_done",
+    "f_plan_kr",
+    "f_sv",
+    "f_piano",
+    "f_sister"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.2,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 445.92820000252686,
+    "ann_search": 6.882700006826781,
+    "total": 452.81090000935365
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_piano",
+    "f_sv",
+    "f_ielts",
+    "f_kpop_bts",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 373.321399994893,
+    "ann_search": 5.7923999993363395,
+    "total": 379.11379999422934
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "qid": "u03_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_kpop_bts",
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_plan_kr"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 381.3957999955164,
+    "ann_search": 3.0515999969793484,
+    "total": 384.4473999924958
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q1",
+   "type": "direct",
+   "keys": [
+    "f_name",
+    "f_cat",
+    "f_run",
+    "f_jp",
+    "f_city"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 379.1135000064969,
+    "ann_search": 3.3536999981151894,
+    "total": 382.4672000046121
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_jp",
+    "f_run",
+    "f_name",
+    "f_cat",
+    "f_city"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 355.00550000870135,
+    "ann_search": 3.4094000002369285,
+    "total": 358.4149000089383
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_cat",
+    "f_name",
+    "f_run",
+    "f_jp",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 370.9270999970613,
+    "ann_search": 5.697100001270883,
+    "total": 376.6241999983322
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q4",
+   "type": "conflict",
+   "keys": [
+    "f_pho_no",
+    "f_buncha",
+    "f_run",
+    "f_jp",
+    "f_cat"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 384.76559999980964,
+    "ann_search": 4.020200009108521,
+    "total": 388.78580000891816
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q5",
+   "type": "conflict",
+   "keys": [
+    "f_run",
+    "f_hike_no",
+    "f_jp",
+    "f_cat",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 378.31960000039544,
+    "ann_search": 3.975300001911819,
+    "total": 382.29490000230726
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_buncha",
+    "f_pho_no",
+    "f_jp",
+    "f_name",
+    "f_run"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 361.75749999529216,
+    "ann_search": 4.091099996003322,
+    "total": 365.8485999912955
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "qid": "u01_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_buncha",
+    "f_run",
+    "f_jp",
+    "f_name",
+    "f_pho_no"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 356.7451999988407,
+    "ann_search": 4.740999997011386,
+    "total": 361.4861999958521
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_nam",
+    "f_wedding",
+    "f_job",
+    "f_marathon",
+    "f_city_hn"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 383.02189999376424,
+    "ann_search": 2.43429999682121,
+    "total": 385.45619999058545
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_job",
+    "f_name_nam",
+    "f_city_hn",
+    "f_wedding",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 375.72240000008605,
+    "ann_search": 3.1940000044414774,
+    "total": 378.91640000452753
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_city_hn",
+    "f_marathon",
+    "f_wedding",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 364.15400000987574,
+    "ann_search": 3.483099993900396,
+    "total": 367.63710000377614
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q4",
+   "type": "conflict",
+   "keys": [
+    "f_cafe_yes",
+    "f_wedding",
+    "f_marathon",
+    "f_job",
+    "f_city_hn"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 351.8635000073118,
+    "ann_search": 3.451700002187863,
+    "total": 355.3152000094997
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q5",
+   "type": "conflict",
+   "keys": [
+    "f_valorant",
+    "f_rust",
+    "f_marathon",
+    "f_name_nam",
+    "f_wedding"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 361.87589999462944,
+    "ann_search": 3.010200001881458,
+    "total": 364.8860999965109
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_job",
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 372.4951000040164,
+    "ann_search": 4.3809000053443015,
+    "total": 376.8760000093607
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "qid": "u02_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 352.9006000026129,
+    "ann_search": 4.7990000020945445,
+    "total": 357.69960000470746
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_mai",
+    "f_sister",
+    "f_sv",
+    "f_kr_done",
+    "f_math_no"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 402.1459999930812,
+    "ann_search": 7.517099991673604,
+    "total": 409.6630999847548
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_sv",
+    "f_piano",
+    "f_sister",
+    "f_kr_done",
+    "f_name_mai"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 362.4698000057833,
+    "ann_search": 3.776900004595518,
+    "total": 366.24670001037885
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_math_no",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 357.32710000593215,
+    "ann_search": 2.6661000010790303,
+    "total": 359.9932000070112
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q4",
+   "type": "conflict",
+   "keys": [
+    "f_piano",
+    "f_kpop_twice",
+    "f_kr_done",
+    "f_sister",
+    "f_ielts"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 363.23770000308286,
+    "ann_search": 6.852899998193607,
+    "total": 370.09060000127647
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q5",
+   "type": "conflict",
+   "keys": [
+    "f_kr_done",
+    "f_sv",
+    "f_piano",
+    "f_sister",
+    "f_name_mai"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 360.7027999969432,
+    "ann_search": 3.015499998582527,
+    "total": 363.71829999552574
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_piano",
+    "f_sv",
+    "f_ielts",
+    "f_kr_done",
+    "f_sister"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 363.7676999933319,
+    "ann_search": 3.7046999932499602,
+    "total": 367.4723999865819
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "qid": "u03_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_math_no",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 383.27700000081677,
+    "ann_search": 2.4206999951275066,
+    "total": 385.6976999959443
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q1",
+   "type": "direct",
+   "keys": [
+    "f_name",
+    "f_cat",
+    "f_run",
+    "f_pho",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 366.3463999982923,
+    "ann_search": 2.8820999868912622,
+    "rank": 0.0610999995842576,
+    "total": 369.28959998476785
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_jp",
+    "f_run",
+    "f_name",
+    "f_hike",
+    "f_pho"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 383.39170000108425,
+    "ann_search": 4.948999994667247,
+    "rank": 0.08840000373311341,
+    "total": 388.4290999994846
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_cat",
+    "f_name",
+    "f_run",
+    "f_hike",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 371.360499993898,
+    "ann_search": 3.7005000049248338,
+    "rank": 0.0737000082153827,
+    "total": 375.1347000070382
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q4",
+   "type": "conflict",
+   "keys": [
+    "f_pho",
+    "f_pho",
+    "f_pho_no",
+    "f_buncha",
+    "f_run"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333
+   },
+   "timings": {
+    "embed": 367.8782999922987,
+    "ann_search": 6.001600006129593,
+    "rank": 0.08850000449456275,
+    "total": 373.96840000292286
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q5",
+   "type": "conflict",
+   "keys": [
+    "f_hike",
+    "f_run",
+    "f_pho",
+    "f_hike_no",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.2,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 358.2542999938596,
+    "ann_search": 4.281400004401803,
+    "rank": 0.11579999409150332,
+    "total": 362.6514999923529
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_pho",
+    "f_buncha",
+    "f_pho_no",
+    "f_pho",
+    "f_hike"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 367.88210000668187,
+    "ann_search": 4.407400003401563,
+    "rank": 0.04270000499673188,
+    "total": 372.33220001508016
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "qid": "u01_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_pho",
+    "f_buncha",
+    "f_hike",
+    "f_run",
+    "f_jp"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 358.16430000704713,
+    "ann_search": 4.306600007112138,
+    "rank": 0.0627999979769811,
+    "total": 362.53370001213625
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_nam",
+    "f_wedding",
+    "f_job",
+    "f_lienquan",
+    "f_marathon"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 369.55940000189,
+    "ann_search": 4.800700000487268,
+    "rank": 0.05319999763742089,
+    "total": 374.4133000000147
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_job",
+    "f_name_nam",
+    "f_city_hn",
+    "f_wedding",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 364.26940000092145,
+    "ann_search": 3.9254000002983958,
+    "rank": 0.13669999316334724,
+    "total": 368.3314999943832
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_city_hn",
+    "f_marathon",
+    "f_wedding",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 350.982700008899,
+    "ann_search": 4.348999995272607,
+    "rank": 0.1112000027205795,
+    "total": 355.44290000689216
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q4",
+   "type": "conflict",
+   "keys": [
+    "f_cafe_no",
+    "f_cafe_yes",
+    "f_cafe_no",
+    "f_wedding",
+    "f_marathon"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 352.47399999934714,
+    "ann_search": 3.174199999193661,
+    "rank": 0.04460000491235405,
+    "total": 355.69280000345316
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q5",
+   "type": "conflict",
+   "keys": [
+    "f_lienquan",
+    "f_valorant",
+    "f_rust",
+    "f_marathon",
+    "f_name_nam"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.2,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 377.4235000018962,
+    "ann_search": 5.438799998955801,
+    "rank": 0.09259999205823988,
+    "total": 382.9548999929102
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_job",
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 400.3227000066545,
+    "ann_search": 7.681300005060621,
+    "rank": 0.1120000088121742,
+    "total": 408.1160000205273
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "qid": "u02_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 354.8979000042891,
+    "ann_search": 8.266499993624166,
+    "rank": 0.08070000330917537,
+    "total": 363.24510000122245
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_mai",
+    "f_sister",
+    "f_sv",
+    "f_kpop_bts",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 347.87699999287724,
+    "ann_search": 2.7984000043943524,
+    "rank": 0.06740000389982015,
+    "total": 350.7428000011714
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_sv",
+    "f_piano",
+    "f_kpop_bts",
+    "f_sister",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 362.6555999944685,
+    "ann_search": 3.2333999988622963,
+    "rank": 0.07169999298639596,
+    "total": 365.9606999863172
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_kpop_bts",
+    "f_math_no"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 349.762700003339,
+    "ann_search": 2.625699999043718,
+    "rank": 0.05129999772179872,
+    "total": 352.4397000001045
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q4",
+   "type": "conflict",
+   "keys": [
+    "f_kpop_bts",
+    "f_kpop_bts",
+    "f_plan_kr",
+    "f_piano",
+    "f_kpop_twice"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.4,
+    "redundancy": 0.19999999999999996,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.2
+   },
+   "timings": {
+    "embed": 379.5255000004545,
+    "ann_search": 3.1445999920833856,
+    "rank": 0.08199999865610152,
+    "total": 382.752099991194
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q5",
+   "type": "conflict",
+   "keys": [
+    "f_kr_done",
+    "f_plan_kr",
+    "f_sv",
+    "f_piano",
+    "f_sister"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.2,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 340.95240000169724,
+    "ann_search": 2.958900004159659,
+    "rank": 0.052499992307275534,
+    "total": 343.9637999981642
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_piano",
+    "f_sv",
+    "f_ielts",
+    "f_kpop_bts",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 442.09609999961685,
+    "ann_search": 2.5996999902417883,
+    "rank": 0.05470000905916095,
+    "total": 444.7504999989178
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "qid": "u03_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_kpop_bts",
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_plan_kr"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 357.87369999161456,
+    "ann_search": 4.443900004844181,
+    "rank": 0.06979999307077378,
+    "total": 362.3873999895295
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q1",
+   "type": "direct",
+   "keys": [
+    "f_name",
+    "f_cat",
+    "f_run",
+    "f_jp",
+    "f_city"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 369.12950000260025,
+    "ann_search": 3.242799997678958,
+    "rank": 0.08709999383427203,
+    "total": 372.4593999941135
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_jp",
+    "f_run",
+    "f_name",
+    "f_cat",
+    "f_city"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 349.7122999979183,
+    "ann_search": 3.3242000063182786,
+    "rank": 0.04460000491235405,
+    "total": 353.08110000914894
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_cat",
+    "f_name",
+    "f_run",
+    "f_jp",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 364.5862999983365,
+    "ann_search": 3.2439999922644347,
+    "rank": 0.030499999411404133,
+    "total": 367.8607999900123
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q4",
+   "type": "conflict",
+   "keys": [
+    "f_pho_no",
+    "f_buncha",
+    "f_run",
+    "f_jp",
+    "f_cat"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 371.91210000310093,
+    "ann_search": 3.305000005639158,
+    "rank": 0.04749999789055437,
+    "total": 375.26460000663064
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q5",
+   "type": "conflict",
+   "keys": [
+    "f_run",
+    "f_hike_no",
+    "f_jp",
+    "f_cat",
+    "f_buncha"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 369.6974000049522,
+    "ann_search": 4.1702000016812235,
+    "rank": 0.06350000330712646,
+    "total": 373.93110000994056
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_buncha",
+    "f_pho_no",
+    "f_jp",
+    "f_name",
+    "f_run"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 361.8047999916598,
+    "ann_search": 4.978199998731725,
+    "rank": 0.05289999535307288,
+    "total": 366.8358999857446
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "qid": "u01_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_buncha",
+    "f_run",
+    "f_jp",
+    "f_name",
+    "f_pho_no"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 371.38310000591446,
+    "ann_search": 7.650900006410666,
+    "rank": 0.08869999146554619,
+    "total": 379.12270000379067
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_nam",
+    "f_wedding",
+    "f_job",
+    "f_marathon",
+    "f_city_hn"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 385.4322000115644,
+    "ann_search": 7.8760000033071265,
+    "rank": 0.11889998859260231,
+    "total": 393.42710000346415
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_job",
+    "f_name_nam",
+    "f_city_hn",
+    "f_wedding",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 338.9961999928346,
+    "ann_search": 4.878799998550676,
+    "rank": 0.07139999070204794,
+    "total": 343.9463999820873
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_city_hn",
+    "f_marathon",
+    "f_wedding",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 357.5612000131514,
+    "ann_search": 3.9758000057190657,
+    "rank": 0.07769999501761049,
+    "total": 361.61470001388807
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q4",
+   "type": "conflict",
+   "keys": [
+    "f_cafe_yes",
+    "f_wedding",
+    "f_marathon",
+    "f_job",
+    "f_city_hn"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 368.23229999572504,
+    "ann_search": 7.711600002949126,
+    "rank": 0.09660000796429813,
+    "total": 376.04050000663847
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q5",
+   "type": "conflict",
+   "keys": [
+    "f_valorant",
+    "f_rust",
+    "f_marathon",
+    "f_name_nam",
+    "f_wedding"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 0.5,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 354.07410000334494,
+    "ann_search": 6.870099998195656,
+    "rank": 0.07340000593103468,
+    "total": 361.01760000747163
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_job",
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 344.7128999978304,
+    "ann_search": 3.7309000035747886,
+    "rank": 0.03670000296551734,
+    "total": 348.4805000043707
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "qid": "u02_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_wedding",
+    "f_name_nam",
+    "f_marathon",
+    "f_job",
+    "f_rust"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 351.3370999862673,
+    "ann_search": 6.112799994298257,
+    "rank": 0.06160000339150429,
+    "total": 357.51149998395704
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q1",
+   "type": "direct",
+   "keys": [
+    "f_name_mai",
+    "f_sister",
+    "f_sv",
+    "f_kr_done",
+    "f_math_no"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 368.49700000311714,
+    "ann_search": 5.708600001526065,
+    "rank": 0.030499999411404133,
+    "total": 374.2361000040546
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q2",
+   "type": "paraphrase",
+   "keys": [
+    "f_sv",
+    "f_piano",
+    "f_sister",
+    "f_kr_done",
+    "f_name_mai"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 348.64459998789243,
+    "ann_search": 3.9028000028338283,
+    "rank": 0.028700000257231295,
+    "total": 352.5760999909835
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q3",
+   "type": "paraphrase",
+   "keys": [
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_math_no",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 347.84220000437927,
+    "ann_search": 2.8922000055899844,
+    "rank": 0.04710000939667225,
+    "total": 350.7815000193659
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q4",
+   "type": "conflict",
+   "keys": [
+    "f_piano",
+    "f_kpop_twice",
+    "f_kr_done",
+    "f_sister",
+    "f_ielts"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 0.5
+   },
+   "timings": {
+    "embed": 347.4326999858022,
+    "ann_search": 2.9280000017024577,
+    "rank": 0.12399999832268804,
+    "total": 350.4846999858273
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q5",
+   "type": "conflict",
+   "keys": [
+    "f_kr_done",
+    "f_sv",
+    "f_piano",
+    "f_sister",
+    "f_name_mai"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 360.7155999925453,
+    "ann_search": 6.739799995557405,
+    "rank": 0.09399998816661537,
+    "total": 367.54939997626934
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q6",
+   "type": "duplicate",
+   "keys": [
+    "f_piano",
+    "f_sv",
+    "f_ielts",
+    "f_kr_done",
+    "f_sister"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "mrr": 1.0
+   },
+   "timings": {
+    "embed": 354.1835999931209,
+    "ann_search": 4.326399997808039,
+    "rank": 0.029700007871724665,
+    "total": 358.53969999880064
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "qid": "u03_q7",
+   "type": "no_relevant",
+   "keys": [
+    "f_sister",
+    "f_name_mai",
+    "f_sv",
+    "f_math_no",
+    "f_kr_done"
+   ],
+   "metrics": {
+    "n_returned": 5,
+    "stale": 0.0,
+    "redundancy": 0.0,
+    "fp": 1.0
+   },
+   "timings": {
+    "embed": 358.60110000066925,
+    "ann_search": 7.573499999125488,
+    "rank": 0.09139999747276306,
+    "total": 366.2659999972675
+   }
+  }
+ ],
+ "writes": [
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_name",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 630.8148000098299,
+    "db_write": 13.879200007067993,
+    "total": 644.6940000168979
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_pho",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 396.2945000093896,
+    "db_write": 4.1218999976990744,
+    "total": 400.41640000708867
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_hike",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.38539999874774,
+    "db_write": 4.1403999930480495,
+    "total": 361.5257999917958
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_pho_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 468.6329999967711,
+    "db_write": 5.228000009083189,
+    "total": 473.8610000058543
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_jp",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 386.91640000615735,
+    "db_write": 5.190900003071874,
+    "total": 392.1073000092292
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_pho_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 387.8234000003431,
+    "db_write": 4.744700010633096,
+    "total": 392.5681000109762
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_buncha",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 427.7441000012914,
+    "db_write": 10.97200000367593,
+    "total": 438.7161000049673
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_cat",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 367.2634999966249,
+    "db_write": 5.980300004011951,
+    "total": 373.24380000063684
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_hike_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 388.3813000138616,
+    "db_write": 13.136899986420758,
+    "total": 401.5182000002824
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_run",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 384.89660000777803,
+    "db_write": 3.7988999974913895,
+    "total": 388.6955000052694
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u01",
+   "key": "f_city",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 366.8113000021549,
+    "db_write": 10.939200001303107,
+    "total": 377.750500003458
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_name_nam",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.37739999988116,
+    "db_write": 5.1851000025635585,
+    "total": 363.5625000024447
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_job",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 487.7360999962548,
+    "db_write": 5.186299997149035,
+    "total": 492.9223999934038
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_city_hn",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 377.59610000648536,
+    "db_write": 5.406899988884106,
+    "total": 383.00299999536946
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_cafe_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 434.58929999906104,
+    "db_write": 7.521899999119341,
+    "total": 442.1111999981804
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_lienquan",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 443.9076999988174,
+    "db_write": 12.976199999684468,
+    "total": 456.8838999985019
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_cafe_no_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 492.47689999174327,
+    "db_write": 11.643899997579865,
+    "total": 504.12079998932313
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_cafe_yes",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 402.5802999967709,
+    "db_write": 6.1224999953992665,
+    "total": 408.7027999921702
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_rust",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 385.38469999912195,
+    "db_write": 13.694100009161048,
+    "total": 399.078800008283
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_lienquan_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 365.0904000096489,
+    "db_write": 12.682000000495464,
+    "total": 377.77240001014434
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_valorant",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 450.6191999971634,
+    "db_write": 6.176700000651181,
+    "total": 456.79589999781456
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_wedding",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 410.41240000049584,
+    "db_write": 5.479299987200648,
+    "total": 415.8916999876965
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u02",
+   "key": "f_marathon",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 368.6234000051627,
+    "db_write": 5.634100001771003,
+    "total": 374.2575000069337
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_name_mai",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 367.95460000575986,
+    "db_write": 6.51980000839103,
+    "total": 374.4744000141509
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_sv",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 593.3211999945343,
+    "db_write": 5.88189999689348,
+    "total": 599.2030999914277
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_kpop_bts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 448.51220000418834,
+    "db_write": 4.794000007677823,
+    "total": 453.30620001186617
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_plan_kr",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 541.5779000031762,
+    "db_write": 11.207399991690181,
+    "total": 552.7852999948664
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_bts_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 434.4396000087727,
+    "db_write": 9.89040000422392,
+    "total": 444.3300000129966
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_math_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 369.03000000165775,
+    "db_write": 9.401899995282292,
+    "total": 378.43189999694005
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_kpop_twice",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 385.2613999915775,
+    "db_write": 5.645800003549084,
+    "total": 390.9071999951266
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_sister",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 420.2377999899909,
+    "db_write": 10.437499993713573,
+    "total": 430.67529998370446
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_piano",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 394.33770001051016,
+    "db_write": 14.190600006259046,
+    "total": 408.5283000167692
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_kr_done",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 370.8960000076331,
+    "db_write": 14.79319999634754,
+    "total": 385.68920000398066
+   }
+  },
+  {
+   "run": 0,
+   "config": "B0_none",
+   "user": "u03",
+   "key": "f_ielts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 392.55570000386797,
+    "db_write": 9.474199992837384,
+    "total": 402.02989999670535
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_name",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 434.77929999062326,
+    "db_write": 7.210499999928288,
+    "total": 441.98979999055155
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_pho",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 389.7133000136819,
+    "db_write": 12.089700001524761,
+    "total": 401.80300001520663
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_hike",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 388.19100000546314,
+    "db_write": 7.249700007378124,
+    "total": 395.44070001284126
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_pho_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 407.9533999902196,
+    "db_write": 8.58439999865368,
+    "total": 416.5377999888733
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_jp",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 376.50919999578036,
+    "db_write": 6.996399999479763,
+    "total": 383.5055999952601
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_pho_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 369.0970000025118,
+    "db_write": 4.495799992582761,
+    "total": 373.59279999509454
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_buncha",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 507.74319999618456,
+    "db_write": 15.234799997415394,
+    "total": 522.9779999936
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_cat",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 385.8311999938451,
+    "db_write": 6.205999990925193,
+    "total": 392.03719998477027
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_hike_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 399.9872999993386,
+    "db_write": 15.582499996526167,
+    "total": 415.56979999586474
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_run",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 431.72650001361035,
+    "db_write": 11.363199999323115,
+    "total": 443.08970001293346
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u01",
+   "key": "f_city",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 441.17849999747705,
+    "db_write": 4.121299993130378,
+    "total": 445.2997999906074
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_name_nam",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 352.6271999871824,
+    "db_write": 4.57809999352321,
+    "total": 357.2052999807056
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_job",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 379.4408999965526,
+    "db_write": 4.54629999876488,
+    "total": 383.9871999953175
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_city_hn",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 382.56969999929424,
+    "db_write": 5.384000003687106,
+    "total": 387.95370000298135
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_cafe_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 380.29470000765286,
+    "db_write": 7.475200007320382,
+    "total": 387.76990001497325
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_lienquan",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 378.86060000164434,
+    "db_write": 14.732499999809079,
+    "total": 393.5931000014534
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_cafe_no_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 373.792999991565,
+    "db_write": 11.17579999845475,
+    "total": 384.96879999001976
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_cafe_yes",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 383.0125000094995,
+    "db_write": 7.240499995532446,
+    "total": 390.25300000503194
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_rust",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 403.94930000184104,
+    "db_write": 14.13089998823125,
+    "total": 418.0801999900723
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_lienquan_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 343.84629999112803,
+    "db_write": 5.039999989094213,
+    "total": 348.88629998022225
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_valorant",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 344.2670999938855,
+    "db_write": 11.914200003957376,
+    "total": 356.18129999784287
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_wedding",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 363.2332999986829,
+    "db_write": 8.269799989648163,
+    "total": 371.5030999883311
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u02",
+   "key": "f_marathon",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 359.11960000521503,
+    "db_write": 13.858900012564845,
+    "total": 372.9785000177799
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_name_mai",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 373.576600002707,
+    "db_write": 5.293499998515472,
+    "total": 378.87010000122245
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_sv",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 372.00839999422897,
+    "db_write": 14.673499987111427,
+    "total": 386.6818999813404
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_kpop_bts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 362.21500000101514,
+    "db_write": 4.8030000034486875,
+    "total": 367.01800000446383
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_plan_kr",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 350.87800001201686,
+    "db_write": 6.589700002223253,
+    "total": 357.4677000142401
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_bts_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 365.50509999506176,
+    "db_write": 11.755100000300445,
+    "total": 377.2601999953622
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_math_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 370.6511999916984,
+    "db_write": 7.020700009888969,
+    "total": 377.67190000158735
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_kpop_twice",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 372.62310000369325,
+    "db_write": 11.976399997365661,
+    "total": 384.5995000010589
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_sister",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 376.9719999982044,
+    "db_write": 3.887300001224503,
+    "total": 380.8592999994289
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_piano",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 390.62510000076145,
+    "db_write": 4.819199995836243,
+    "total": 395.4442999965977
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_kr_done",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 389.57749999826774,
+    "db_write": 5.11969999934081,
+    "total": 394.69719999760855
+   }
+  },
+  {
+   "run": 0,
+   "config": "B1_keyword",
+   "user": "u03",
+   "key": "f_ielts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.17940000561066,
+    "db_write": 14.283000011346303,
+    "total": 372.46240001695696
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_name",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 363.0358999944292,
+    "db_write": 10.101899999426678,
+    "total": 373.1377999938559
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_pho",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 369.81220000598114,
+    "db_write": 15.549899995676242,
+    "total": 385.3621000016574
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_hike",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 423.9653999975417,
+    "db_write": 6.610599986743182,
+    "total": 430.57599998428486
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_pho_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 366.3044999993872,
+    "db_write": 15.435900000738911,
+    "total": 381.7404000001261
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_jp",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 402.8584000043338,
+    "db_write": 9.163599999737926,
+    "total": 412.02200000407174
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_pho_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 372.8999000013573,
+    "db_write": 5.322699988028035,
+    "total": 378.22259998938534
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_buncha",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 390.7400000025518,
+    "db_write": 12.037200009217486,
+    "total": 402.7772000117693
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_cat",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 378.80230000882875,
+    "db_write": 6.739100004779175,
+    "total": 385.5414000136079
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_hike_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 397.7564000088023,
+    "db_write": 4.805100004887208,
+    "total": 402.5615000136895
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_run",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 348.5752999986289,
+    "db_write": 5.921899995882995,
+    "total": 354.4971999945119
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u01",
+   "key": "f_city",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 390.43600000150036,
+    "db_write": 9.122899995418265,
+    "total": 399.5588999969186
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_name_nam",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 365.9126000129618,
+    "db_write": 10.854899999685585,
+    "total": 376.76750001264736
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_job",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 366.63319999934174,
+    "db_write": 15.696400005253963,
+    "total": 382.3296000045957
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_city_hn",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.7231999982614,
+    "db_write": 4.443700003321283,
+    "total": 359.1669000015827
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_cafe_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 352.71880000072997,
+    "db_write": 13.44789999711793,
+    "total": 366.1666999978479
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_lienquan",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 456.82449999731034,
+    "db_write": 9.247900001355447,
+    "total": 466.0723999986658
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_cafe_no_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 348.7063000065973,
+    "db_write": 5.311699991580099,
+    "total": 354.0179999981774
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_cafe_yes",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 381.42799999332055,
+    "db_write": 4.748199993628077,
+    "total": 386.17619998694863
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_rust",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 371.17790000047535,
+    "db_write": 18.45070000854321,
+    "total": 389.62860000901856
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_lienquan_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 386.5628000057768,
+    "db_write": 5.6613000051584095,
+    "total": 392.2241000109352
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_valorant",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 361.02670000400394,
+    "db_write": 5.087599987746216,
+    "total": 366.11429999175016
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_wedding",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 361.0826000076486,
+    "db_write": 3.6410000029718503,
+    "total": 364.72360001062043
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u02",
+   "key": "f_marathon",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.8931999976048,
+    "db_write": 10.490100001334213,
+    "total": 365.38329999893904
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_name_mai",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 369.391700005508,
+    "db_write": 6.318800005828962,
+    "total": 375.710500011337
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_sv",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.69629999715835,
+    "db_write": 459.77440000569914,
+    "total": 814.4707000028575
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_kpop_bts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 475.25580000365153,
+    "db_write": 29.00839998619631,
+    "total": 504.26419998984784
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_plan_kr",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.8600000037113,
+    "db_write": 6.914099998539314,
+    "total": 364.77410000225063
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_bts_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 365.044799997122,
+    "db_write": 3.1744000007165596,
+    "total": 368.2191999978386
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_math_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 381.8919999903301,
+    "db_write": 8.041099994443357,
+    "total": 389.93309998477343
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_kpop_twice",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 356.14189998887014,
+    "db_write": 5.306499995640479,
+    "total": 361.4483999845106
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_sister",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 408.01009999995586,
+    "db_write": 5.730000004405156,
+    "total": 413.740100004361
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_piano",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 466.8311000132235,
+    "db_write": 5.237499994109385,
+    "total": 472.06860000733286
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_kr_done",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 377.6754999998957,
+    "db_write": 12.590900005307049,
+    "total": 390.26640000520274
+   }
+  },
+  {
+   "run": 0,
+   "config": "B2_vector",
+   "user": "u03",
+   "key": "f_ielts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 350.0231999933021,
+    "db_write": 6.028000003425404,
+    "total": 356.0511999967275
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_name",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 346.9963999959873,
+    "ann_search": 3.0110999941825867,
+    "llm_classify": 1740.1374000037322,
+    "db_write": 18.73399999749381,
+    "total": 2108.878899991396
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_pho",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 366.3051000039559,
+    "ann_search": 6.440000011934899,
+    "llm_classify": 2249.0430000034394,
+    "db_write": 10.80319999891799,
+    "total": 2632.591300018248
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_hike",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 341.75130000221543,
+    "ann_search": 2.861100001609884,
+    "llm_classify": 2660.279999996419,
+    "db_write": 14.04999999795109,
+    "total": 3018.9423999981955
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_pho_dup",
+   "gold": "REINFORCE",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 352.3096999997506,
+    "ann_search": 4.1846999956760556,
+    "llm_classify": 3500.2868000010494,
+    "db_write": 10.167000000365078,
+    "total": 3866.948199996841
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_jp",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 390.9032999945339,
+    "ann_search": 4.359999991720542,
+    "llm_classify": 3971.8189999985043,
+    "db_write": 17.448799990233965,
+    "total": 4384.531099974993
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_pho_no",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 346.4642000035383,
+    "ann_search": 2.7420999977039173,
+    "llm_classify": 3561.56010000268,
+    "db_write": 21.51009999215603,
+    "total": 3932.276499996078
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_buncha",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 353.1706999929156,
+    "ann_search": 2.5033999991137534,
+    "llm_classify": 4368.392000003951,
+    "db_write": 7.041500008199364,
+    "total": 4731.107600004179
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_cat",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.1553999974858,
+    "ann_search": 3.2852000003913417,
+    "llm_classify": 3546.828299993649,
+    "db_write": 17.34299999952782,
+    "total": 3925.611899991054
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_hike_no",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 384.33570000051986,
+    "ann_search": 3.297900009783916,
+    "llm_classify": 3783.305000004475,
+    "db_write": 20.182699998258613,
+    "total": 4191.121300013037
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_run",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.3624000012642,
+    "ann_search": 2.667500011739321,
+    "llm_classify": 4226.191299996572,
+    "db_write": 17.609200003789738,
+    "total": 4600.830400013365
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u01",
+   "key": "f_city",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 368.4244000032777,
+    "ann_search": 4.131699999561533,
+    "llm_classify": 3820.24439999077,
+    "db_write": 10.514299996430054,
+    "total": 4203.314799990039
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_name_nam",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 350.77420000743587,
+    "ann_search": 3.0808999872533605,
+    "llm_classify": 1544.7835999948438,
+    "db_write": 12.651099998038262,
+    "total": 1911.2897999875713
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_job",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.9796999983955,
+    "ann_search": 5.235900011030026,
+    "llm_classify": 2072.6812000066275,
+    "db_write": 9.023400009027682,
+    "total": 2444.9202000250807
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_city_hn",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 347.4203000077978,
+    "ann_search": 3.1900999892968684,
+    "llm_classify": 2276.513699995121,
+    "db_write": 18.24289999785833,
+    "total": 2645.366999990074
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_cafe_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 364.6847999916645,
+    "ann_search": 6.793000007746741,
+    "llm_classify": 2664.1019000089727,
+    "db_write": 12.612499995157123,
+    "total": 3048.192200003541
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_lienquan",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 352.3696000047494,
+    "ann_search": 7.368499995209277,
+    "llm_classify": 3827.5295999919763,
+    "db_write": 18.9232999982778,
+    "total": 4206.190999990213
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_cafe_no_dup",
+   "gold": "REINFORCE",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 344.4675000064308,
+    "ann_search": 5.555399999138899,
+    "llm_classify": 4634.987199999159,
+    "db_write": 3.590199994505383,
+    "total": 4988.600299999234
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_cafe_yes",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 353.0520000058459,
+    "ann_search": 2.9232999950181693,
+    "llm_classify": 2886.4090999995824,
+    "db_write": 6.071199997677468,
+    "total": 3248.455599998124
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_rust",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 348.54120000090916,
+    "ann_search": 3.689499993924983,
+    "llm_classify": 4264.689600007841,
+    "db_write": 19.160600000759587,
+    "total": 4636.080900003435
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_lienquan_no",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 348.72429999813903,
+    "ann_search": 7.69169999693986,
+    "llm_classify": 3029.5951000007335,
+    "db_write": 19.436999995377846,
+    "total": 3405.4480999911902
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_valorant",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 388.6087000137195,
+    "ann_search": 7.218699989607558,
+    "llm_classify": 4140.851699994528,
+    "db_write": 18.568100000265986,
+    "total": 4555.247199998121
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_wedding",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.9343000049703,
+    "ann_search": 5.2244999969843775,
+    "llm_classify": 2400.486300000921,
+    "db_write": 10.747699998319149,
+    "total": 2771.3928000011947
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u02",
+   "key": "f_marathon",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 373.1736999907298,
+    "ann_search": 6.001000001560897,
+    "llm_classify": 3597.1072999964235,
+    "db_write": 11.80989999556914,
+    "total": 3988.0918999842834
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_name_mai",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 343.24390000256244,
+    "ann_search": 3.316300004371442,
+    "llm_classify": 3160.0458000029903,
+    "db_write": 21.418999996967614,
+    "total": 3528.025000006892
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_sv",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 379.77879999380093,
+    "ann_search": 3.9324999961536378,
+    "llm_classify": 2355.637900007423,
+    "db_write": 7.428800003253855,
+    "total": 2746.7780000006314
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_kpop_bts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 351.0965000023134,
+    "ann_search": 3.879999989294447,
+    "llm_classify": 2044.2215999937616,
+    "db_write": 13.47150000219699,
+    "total": 2412.6695999875665
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_plan_kr",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 385.3181000013137,
+    "ann_search": 5.896400005440228,
+    "llm_classify": 5032.606399996439,
+    "db_write": 18.277800001669675,
+    "total": 5442.098700004863
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_bts_dup",
+   "gold": "REINFORCE",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 356.35659999388736,
+    "ann_search": 4.545599993434735,
+    "llm_classify": 4289.691700003459,
+    "db_write": 22.29789999546483,
+    "total": 4672.891799986246
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_math_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 359.93709998729173,
+    "ann_search": 4.3043000041507185,
+    "llm_classify": 1963.8757000066107,
+    "db_write": 19.61740000115242,
+    "total": 2347.7344999992056
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_kpop_twice",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 378.6186000070302,
+    "ann_search": 3.396699990844354,
+    "llm_classify": 8066.796600003727,
+    "db_write": 12.864899996202439,
+    "total": 8461.676799997804
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_sister",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 359.75730000063777,
+    "ann_search": 6.878000000142492,
+    "llm_classify": 3776.439399996889,
+    "db_write": 3.578700008802116,
+    "total": 4146.653400006471
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_piano",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.24570001184475,
+    "ann_search": 3.7007999926572666,
+    "llm_classify": 2688.341600005515,
+    "db_write": 10.056999992229976,
+    "total": 3059.345100002247
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_kr_done",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 345.68189999845345,
+    "ann_search": 3.0024000006960705,
+    "llm_classify": 3451.312200006214,
+    "db_write": 9.900400007609278,
+    "total": 3809.8969000129728
+   }
+  },
+  {
+   "run": 0,
+   "config": "A1_vector+dedup",
+   "user": "u03",
+   "key": "f_ielts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.4813000013819,
+    "ann_search": 6.147799998871051,
+    "llm_classify": 3934.993200004101,
+    "db_write": 9.539899998344481,
+    "total": 4308.162200002698
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_name",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 356.680700002471,
+    "db_write": 5.165199996554293,
+    "total": 361.8458999990253
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_pho",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 355.0573999964399,
+    "db_write": 4.495400004088879,
+    "total": 359.5528000005288
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_hike",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 383.90369999979157,
+    "db_write": 9.967999998480082,
+    "total": 393.87169999827165
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_pho_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 413.894999990589,
+    "db_write": 14.501500001642853,
+    "total": 428.39649999223184
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_jp",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 369.5134000008693,
+    "db_write": 6.92650000564754,
+    "total": 376.43990000651684
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_pho_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 367.21850000321865,
+    "db_write": 7.245100001455285,
+    "total": 374.46360000467394
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_buncha",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 337.43119999417104,
+    "db_write": 5.167600000277162,
+    "total": 342.5987999944482
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_cat",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.16230000252835,
+    "db_write": 6.136600000900216,
+    "total": 363.29890000342857
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_hike_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 361.37630000303034,
+    "db_write": 12.12469999154564,
+    "total": 373.500999994576
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_run",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 364.4786000077147,
+    "db_write": 16.976700004306622,
+    "total": 381.4553000120213
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u01",
+   "key": "f_city",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 357.4143000005279,
+    "db_write": 12.413400007062592,
+    "total": 369.82770000759047
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_name_nam",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 350.78860000066925,
+    "db_write": 5.653500003973022,
+    "total": 356.44210000464227
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_job",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 365.5797999963397,
+    "db_write": 3.9235000003827736,
+    "total": 369.5032999967225
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_city_hn",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.62889999407344,
+    "db_write": 4.973399991285987,
+    "total": 363.6022999853594
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_cafe_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 371.34579999838024,
+    "db_write": 5.513399999472313,
+    "total": 376.85919999785256
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_lienquan",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 351.7934999981662,
+    "db_write": 5.542300001252443,
+    "total": 357.33579999941867
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_cafe_no_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 389.2640999983996,
+    "db_write": 5.261600002995692,
+    "total": 394.5257000013953
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_cafe_yes",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 349.86070000741165,
+    "db_write": 7.642699987627566,
+    "total": 357.5033999950392
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_rust",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 381.60680000146385,
+    "db_write": 6.075600002077408,
+    "total": 387.68240000354126
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_lienquan_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 387.74440000997856,
+    "db_write": 7.886200008215383,
+    "total": 395.63060001819395
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_valorant",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 353.21420000400394,
+    "db_write": 13.608199995360337,
+    "total": 366.8223999993643
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_wedding",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 385.59069999610074,
+    "db_write": 6.401899998309091,
+    "total": 391.99259999440983
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u02",
+   "key": "f_marathon",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 348.31810000468977,
+    "db_write": 5.848500004503876,
+    "total": 354.16660000919364
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_name_mai",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 363.1928000104381,
+    "db_write": 7.535900003858842,
+    "total": 370.7287000142969
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_sv",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 365.18269999942277,
+    "db_write": 12.329700010013767,
+    "total": 377.51240000943653
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_kpop_bts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 368.9949000108754,
+    "db_write": 5.038899995270185,
+    "total": 374.0338000061456
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_plan_kr",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 371.4741000003414,
+    "db_write": 5.359399990993552,
+    "total": 376.833499991335
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_bts_dup",
+   "gold": "REINFORCE",
+   "pred": "ADD",
+   "timings": {
+    "embed": 377.9286999924807,
+    "db_write": 4.879899992374703,
+    "total": 382.8085999848554
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_math_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 350.4749999992782,
+    "db_write": 5.239799997070804,
+    "total": 355.71479999634903
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_kpop_twice",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 356.09970000223257,
+    "db_write": 4.953800002112985,
+    "total": 361.05350000434555
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_sister",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 343.42869999818504,
+    "db_write": 3.899899995303713,
+    "total": 347.32859999348875
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_piano",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 434.7278000059305,
+    "db_write": 3.788600006373599,
+    "total": 438.5164000123041
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_kr_done",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 362.1132999978727,
+    "db_write": 4.03510000614915,
+    "total": 366.1484000040218
+   }
+  },
+  {
+   "run": 0,
+   "config": "A2_hybrid",
+   "user": "u03",
+   "key": "f_ielts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 351.9437999930233,
+    "db_write": 3.9231999980984256,
+    "total": 355.8669999911217
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_name",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 355.5225000018254,
+    "ann_search": 3.819999998086132,
+    "llm_classify": 1636.0489000071539,
+    "db_write": 6.1812000058125705,
+    "total": 2001.572600012878
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_pho",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 363.6445000011008,
+    "ann_search": 4.943699997966178,
+    "llm_classify": 2426.847099995939,
+    "db_write": 5.5342999985441566,
+    "total": 2800.96959999355
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_hike",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 339.73770000739023,
+    "ann_search": 3.2582999992882833,
+    "llm_classify": 2518.0419999960577,
+    "db_write": 6.059000006644055,
+    "total": 2867.0970000093803
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_pho_dup",
+   "gold": "REINFORCE",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 363.6580000020331,
+    "ann_search": 4.571299999952316,
+    "llm_classify": 4607.2646000102395,
+    "db_write": 11.007799999788404,
+    "total": 4986.501700012013
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_jp",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.64640001009684,
+    "ann_search": 2.414900009171106,
+    "llm_classify": 3559.391599992523,
+    "db_write": 4.581300003337674,
+    "total": 3921.0342000151286
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_pho_no",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 351.3098999974318,
+    "ann_search": 3.4780999994836748,
+    "llm_classify": 3634.9226999882376,
+    "db_write": 10.46449999557808,
+    "total": 4000.175199980731
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_buncha",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 383.0935000005411,
+    "ann_search": 2.7686000103130937,
+    "llm_classify": 3333.345199993346,
+    "db_write": 5.200899991905317,
+    "total": 3724.4081999961054
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_cat",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.8053999992553,
+    "ann_search": 6.871499994304031,
+    "llm_classify": 3353.131099996972,
+    "db_write": 12.044500006595626,
+    "total": 3730.852499997127
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_hike_no",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 414.8253999883309,
+    "ann_search": 6.148999993456528,
+    "llm_classify": 3626.7585000023246,
+    "db_write": 22.82470000500325,
+    "total": 4070.5575999891153
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_run",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 342.58820000104606,
+    "ann_search": 2.989699991303496,
+    "llm_classify": 4383.861299997079,
+    "db_write": 10.59039999381639,
+    "total": 4740.029599983245
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u01",
+   "key": "f_city",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 361.36499998974614,
+    "ann_search": 3.939399990485981,
+    "llm_classify": 3617.018300006748,
+    "db_write": 12.771199995768256,
+    "total": 3995.0938999827486
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_name_nam",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 350.4130999936024,
+    "ann_search": 6.999300007009879,
+    "llm_classify": 1330.8459000108996,
+    "db_write": 9.005900006741285,
+    "total": 1697.2642000182532
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_job",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 364.8837999935495,
+    "ann_search": 6.077900005038828,
+    "llm_classify": 2143.2133999915095,
+    "db_write": 5.4022999975131825,
+    "total": 2519.577399987611
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_city_hn",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 354.48330000508577,
+    "ann_search": 3.8135999930091202,
+    "llm_classify": 2351.5000000043074,
+    "db_write": 10.817000002134591,
+    "total": 2720.613900004537
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_cafe_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 351.4314999920316,
+    "ann_search": 4.151000001002103,
+    "llm_classify": 2575.862399986363,
+    "db_write": 4.287199990358204,
+    "total": 2935.732099969755
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_lienquan",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 376.25349999871105,
+    "ann_search": 4.91820000752341,
+    "llm_classify": 2882.7864000049885,
+    "db_write": 5.655999993905425,
+    "total": 3269.6141000051284
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_cafe_no_dup",
+   "gold": "REINFORCE",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 356.96160000225063,
+    "ann_search": 3.4472999977879226,
+    "llm_classify": 3279.908800002886,
+    "db_write": 10.118399994098581,
+    "total": 3650.436099997023
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_cafe_yes",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 355.8238999976311,
+    "ann_search": 4.466400001547299,
+    "llm_classify": 3169.278100001975,
+    "db_write": 18.009399995207787,
+    "total": 3547.577799996361
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_rust",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 379.04110000818036,
+    "ann_search": 4.556100000627339,
+    "llm_classify": 3407.011400006013,
+    "db_write": 11.411200001020916,
+    "total": 3802.0198000158416
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_lienquan_no",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 379.96750000456814,
+    "ann_search": 3.835399998934008,
+    "llm_classify": 2701.778100003139,
+    "db_write": 5.353300002752803,
+    "total": 3090.934300009394
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_valorant",
+   "gold": "ADD",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 345.48470001027454,
+    "ann_search": 5.898399991565384,
+    "llm_classify": 20063.207699990016,
+    "db_write": 7.881500001531094,
+    "total": 20422.472299993387
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_wedding",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 368.7562999984948,
+    "ann_search": 3.8369000103557482,
+    "llm_classify": 3517.44179999514,
+    "db_write": 18.60080000187736,
+    "total": 3908.635800005868
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u02",
+   "key": "f_marathon",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 345.91720000025816,
+    "ann_search": 5.363999996916391,
+    "llm_classify": 4267.650599998888,
+    "db_write": 17.18070000060834,
+    "total": 4636.1124999966705
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_name_mai",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 347.9412000015145,
+    "ann_search": 3.6469000042416155,
+    "llm_classify": 1493.0238999950234,
+    "db_write": 12.129399998229928,
+    "total": 1856.7413999990094
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_sv",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.2159999932628,
+    "ann_search": 2.5271000049542636,
+    "llm_classify": 1717.1138999983668,
+    "db_write": 5.319699994288385,
+    "total": 2083.1766999908723
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_kpop_bts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 367.68860000302084,
+    "ann_search": 4.7469999990426,
+    "llm_classify": 1830.5286000104388,
+    "db_write": 9.663999997428618,
+    "total": 2212.628200009931
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_plan_kr",
+   "gold": "ADD",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 391.3449999963632,
+    "ann_search": 4.404199993587099,
+    "llm_classify": 4477.461200003745,
+    "db_write": 16.72369999869261,
+    "total": 4889.934099992388
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_bts_dup",
+   "gold": "REINFORCE",
+   "pred": "REINFORCE",
+   "timings": {
+    "embed": 347.15760000108276,
+    "ann_search": 3.7271999899530783,
+    "llm_classify": 2912.692000012612,
+    "db_write": 10.19559999986086,
+    "total": 3273.7724000035087
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_math_no",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 408.7874999968335,
+    "ann_search": 4.8110000061569735,
+    "llm_classify": 2962.86160001182,
+    "db_write": 10.738099997979589,
+    "total": 3387.19820001279
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_kpop_twice",
+   "gold": "CONFLICT",
+   "pred": "CONFLICT",
+   "timings": {
+    "embed": 386.6083000029903,
+    "ann_search": 3.1965999951353297,
+    "llm_classify": 7401.694200001657,
+    "db_write": 8.185900005628355,
+    "total": 7799.685000005411
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_sister",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 391.2051000079373,
+    "ann_search": 4.820900008780882,
+    "llm_classify": 3406.830499996431,
+    "db_write": 4.630299998098053,
+    "total": 3807.4868000112474
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_piano",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 346.2384999875212,
+    "ann_search": 2.234799991128966,
+    "llm_classify": 3828.541700000642,
+    "db_write": 14.552299995557405,
+    "total": 4191.567299974849
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_kr_done",
+   "gold": "CONFLICT",
+   "pred": "ADD",
+   "timings": {
+    "embed": 370.15569998766296,
+    "ann_search": 3.1721999985165894,
+    "llm_classify": 3017.56999999634,
+    "db_write": 5.466000002343208,
+    "total": 3396.3638999848627
+   }
+  },
+  {
+   "run": 0,
+   "config": "P_hybrid+dedup",
+   "user": "u03",
+   "key": "f_ielts",
+   "gold": "ADD",
+   "pred": "ADD",
+   "timings": {
+    "embed": 358.11880000983365,
+    "ann_search": 4.8214000125881284,
+    "llm_classify": 4417.468199986615,
+    "db_write": 13.101999997161329,
+    "total": 4793.510400006198
+   }
+  }
+ ]
+}

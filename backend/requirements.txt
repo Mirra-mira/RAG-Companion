@@ -6,3 +6,4 @@ pgvector
 pydantic
 python-dotenv
 google-generativeai
+matplotlib

@@ -17,6 +17,11 @@ class IFactRepository(ABC):
     ) -> list[dict]: ...
 
     @abstractmethod
+    def find_top_k_by_keyword(
+        self, user_id: UUID, tokens: list[str], k: int, only_active: bool = True
+    ) -> list[dict]: ...
+
+    @abstractmethod
     def insert(self, user_id: UUID, category: str, content: str,
                embedding: list[float], weight: int = 1) -> dict: ...
 
@@ -66,6 +71,30 @@ class FactRepository(IFactRepository):
                 (vec, user_id, vec, k),
             ).fetchall()
             cols = ["fact_id", "content", "category", "weight", "updated_at", "similarity"]
+            return [dict(zip(cols, r)) for r in rows]
+
+    def find_top_k_by_keyword(self, user_id, tokens, k, only_active=True):
+        # Baseline B1: full-text search PostgreSQL (GIN index tren
+        # to_tsvector('simple', content) - xem migration 002).
+        # tokens da duoc tach + bo stopword o retrievers.tokenize().
+        # Noi bang OR de khong miss cau co 1-2 tu khac khoi gold key.
+        if not tokens:
+            return []
+        tsquery = " | ".join(tokens)
+        status_clause = "AND status = 'active'" if only_active else ""
+        with self._get_conn() as conn:
+            rows = conn.execute(
+                f"""SELECT fact_id, content, category, weight, updated_at,
+                           ts_rank_cd(to_tsvector('simple', content),
+                                      to_tsquery('simple', %s)) AS rank
+                    FROM facts
+                    WHERE user_id = %s {status_clause}
+                      AND to_tsvector('simple', content) @@ to_tsquery('simple', %s)
+                    ORDER BY rank DESC
+                    LIMIT %s""",
+                (tsquery, user_id, tsquery, k),
+            ).fetchall()
+            cols = ["fact_id", "content", "category", "weight", "updated_at", "rank"]
             return [dict(zip(cols, r)) for r in rows]
 
     def insert(self, user_id, category, content, embedding, weight=1):

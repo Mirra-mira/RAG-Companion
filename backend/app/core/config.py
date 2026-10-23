@@ -42,5 +42,9 @@ class Settings:
     GAMMA: float = float(os.getenv("RANK_GAMMA", "0.15"))
     RECENCY_HALF_LIFE_DAYS: float = float(os.getenv("RECENCY_HALF_LIFE_DAYS", "14"))
 
+    # Nguong cosine toi thieu cho retriever (vector/hybrid). 0 = tat bo loc.
+    # Dung de cat bo cac fact lac que (similarity thap) truoc khi rank.
+    MIN_SIMILARITY: float = float(os.getenv("MIN_SIMILARITY", "0"))
+
 
 settings = Settings()

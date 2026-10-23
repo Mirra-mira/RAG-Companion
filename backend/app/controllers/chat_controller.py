@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, BackgroundTasks
 from uuid import UUID
 from app.models.fact import ChatRequest, ChatResponse
 from app.models.conversation import MessageOut
-from app.core.config import settings
+from app.core.timing import StageTimer
 from app.dependencies import (
     get_retrieval_service, get_llm_provider_dep,
     get_extraction_service, get_dedup_service,
@@ -40,34 +40,38 @@ def chat(
     dedup=Depends(get_dedup_service),
     conversation=Depends(get_conversation_service),
 ):
-    # Feature flag cho A/B experiment (muc 4.5): khi ENABLE_MEMORY=false,
-    # bo qua toan bo lop bo nho de do chat luong LLM baseline.
-    if settings.ENABLE_MEMORY:
-        # ---- LUỒNG ĐỌC (đồng bộ, real-time) ----
-        # 1) Facts dai han lien quan
-        retrieved = retrieval.retrieve(req.user_id, req.message)
-        # 2) Bo nho ngan han: summary + N turn gan nhat
+    t = StageTimer()
+
+    # ---- LUỒNG ĐỌC (đồng bộ, real-time) ----
+    # 1) Facts dai han lien quan (retriever tu do thoi gian tung giai doan)
+    retrieved, ret_ms = retrieval.retrieve_timed(req.user_id, req.message)
+    # 2) Bo nho ngan han: summary + N turn gan nhat
+    with t.stage("build_context"):
         summary, recent_turns = conversation.build_context(req.user_id)
-    else:
-        retrieved, summary, recent_turns = [], "", []
+    # 3) LLM tao phan hoi voi day du ngu canh
+    with t.stage("llm_generate"):
+        response_text = llm.generate_response(
+            req.message, retrieved, summary=summary, recent_turns=recent_turns
+        )
 
-    # 3) LLM tao phan hoi (voi hoac khong voi ngu canh, tuy flag)
-    response_text = llm.generate_response(
-        req.message, retrieved, summary=summary, recent_turns=recent_turns
-    )
-
-    if settings.ENABLE_MEMORY:
-        # Luu ca user message va assistant response vao conversations
-        # (dong bo — de lich su khong bi rot khi background task loi).
+    # Luu ca user message va assistant response vao conversations
+    # (dong bo — de lich su khong bi rot khi background task loi).
+    with t.stage("save_turns"):
         conversation.append(req.user_id, "user", req.message)
         conversation.append(req.user_id, "assistant", response_text)
 
-        # ---- LUỒNG GHI (bất đồng bộ) ----
-        background_tasks.add_task(
-            _run_write_path, req.user_id, req.message, extraction, dedup, conversation
-        )
+    # ---- LUỒNG GHI (bất đồng bộ) ----
+    background_tasks.add_task(
+        _run_write_path, req.user_id, req.message, extraction, dedup, conversation
+    )
 
-    return ChatResponse(response=response_text, retrieved_facts=retrieved)
+    latency = {f"retrieval.{k}": v for k, v in ret_ms.items() if k != "total"}
+    latency["retrieval"] = ret_ms["total"]
+    latency.update(t.ms)
+    latency["end_to_end"] = ret_ms["total"] + sum(t.ms.values())
+    latency = {k: round(v, 1) for k, v in latency.items()}
+
+    return ChatResponse(response=response_text, retrieved_facts=retrieved, latency_ms=latency)
 
 
 @router.get("/users/{user_id}/messages", response_model=list[MessageOut])
