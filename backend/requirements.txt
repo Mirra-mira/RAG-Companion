@@ -7,3 +7,8 @@ pydantic
 python-dotenv
 google-generativeai
 matplotlib
+
+# dev/test — can thiet khi chay pytest
+pytest
+pytest-cov
+httpx
