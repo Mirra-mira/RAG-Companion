@@ -46,5 +46,11 @@ class Settings:
     # Dung de cat bo cac fact lac que (similarity thap) truoc khi rank.
     MIN_SIMILARITY: float = float(os.getenv("MIN_SIMILARITY", "0"))
 
+    # Che do retrieval su dung trong dependencies.get_retrieval_service().
+    # Gia tri hop le: none | keyword | vector | hybrid (xem services/retrievers.py).
+    RETRIEVER_MODE: str = os.getenv("RETRIEVER_MODE", "hybrid")
+    # Bat/tat DedupService (muc 3.5). false -> dung NoDedupService (baseline khong khu trung lap).
+    DEDUP_ENABLED: bool = os.getenv("DEDUP_ENABLED", "true").lower() != "false"
+
 
 settings = Settings()
