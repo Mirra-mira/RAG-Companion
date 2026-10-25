@@ -107,3 +107,48 @@ class TestReadPathBasics:
         data = chat(client, user_id, "xin chao")
         assert "response" in data
         assert data["retrieved_facts"] == []
+
+
+class TestEnableMemoryFlag:
+    """Che do A (baseline) cua A/B experiment muc 4.5: ENABLE_MEMORY=False.
+
+    Khi flag tat, controller phai bo qua toan bo lop bo nho:
+      - khong retrieval, khong build_context (retrieved_facts rong),
+      - khong append conversations (bang conversations khong co row moi),
+      - khong trigger background write_path (bang facts khong co row moi).
+    """
+
+    def test_enable_memory_false_bypasses_all_memory_layers(self, client):
+        # Import o day de khong anh huong module load neu test khac khong can
+        from app.core.config import settings
+
+        user_id = create_user(client, "memory_off_user")
+        original = settings.ENABLE_MEMORY
+        settings.ENABLE_MEMORY = False
+        try:
+            res = client.post(
+                "/chat",
+                json={"user_id": user_id, "message": "tao thich pho lam"},
+            )
+            assert res.status_code == 200
+            data = res.json()
+            assert data["retrieved_facts"] == []
+
+            # Doi background task (neu lo add) co thoi gian chay — de ket qua
+            # chac chan: ngay ca o goc do "sai", van phai thay bang khong co
+            # row nao duoc insert.
+            time.sleep(0.3)
+
+            # Khong co fact moi
+            facts = get_facts(client, user_id)
+            assert facts == []
+
+            # Khong co conversation moi
+            with get_conn() as conn:
+                row = conn.execute(
+                    "SELECT COUNT(*) FROM conversations WHERE user_id = %s",
+                    (user_id,),
+                ).fetchone()
+                assert row[0] == 0
+        finally:
+            settings.ENABLE_MEMORY = original
